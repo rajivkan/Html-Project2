@@ -1,8 +1,32 @@
 body{
-	background: #cccccc;
+	background: #ccc;
+	padding: 0;
+	margin: 0;
+	border: #000000 solid 2px;
 }
 
-.hand-cursor{
-	cursor:pointer;
-	font-size: 20px;
-}
+#div1{
+			background: #cc00cc;
+		}
+		.div-style{
+			background: #ff0;
+		}
+		div{
+			background: #ff00ff;
+		}
+		input[type="text"]{
+			background: #ff0000;
+			color: #00ffff;
+			font-size: 14px;
+		}
+
+		input[type="button"]{
+			background: #ff00ff;
+			color: #00ffff;
+			font-size: 14px;
+			border-radius: 5px;
+			background: url(images/close-box.png) repeat-y;
+		}
+		.img-04{
+			height:100px; width: 200px;
+		}
