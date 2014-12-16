@@ -1,4 +1,16 @@
-body{
+@font-face {
+    font-family: sansatioFont;
+    src: url(../fonts/sansation_light.woff);
+}
+
+@font-face {
+    font-family: sansatioFont;
+    src: url(../fonts/sansation_bold.woff);
+    font-weight: bold;
+}
+
+div{
+	
 	background: #ccc;
 	padding: 0;
 	margin: 0;
@@ -12,7 +24,7 @@ body{
 			background: #ff0;
 		}
 		div{
-			background: #ff00ff;
+			font-family: sansatioFont;
 		}
 		input[type="text"]{
 			background: #ff0000;
@@ -25,7 +37,7 @@ body{
 			color: #00ffff;
 			font-size: 14px;
 			border-radius: 5px;
-			background: url(images/close-box.png) repeat-y;
+			background: url(../images/close-box.png) repeat-y;
 		}
 		.img-04{
 			height:100px; width: 200px;

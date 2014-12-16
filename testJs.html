@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function sum(){
+			var val1 = parseFloat(document.getElementById("txt1").value);
+			var val2 = parseFloat(document.getElementById("txt2").value);
+			var sum_value = val1+val2;
+			alert("SUM: "+sum_value.toFixed(2));
+
+			var val3 = parseInt(document.getElementById("txt1").value);
+			var val4 = parseInt(document.getElementById("txt2").value);
+			var sum_value_int = val3+val4;
+			alert("SUM: "+sum_value_int);
+		}
+
+		function tablePrint(){
+			var tab = "";
+			for(var i = 1; i <= 10; i++){
+				tab +=i.toString()+"<br>";
+			}
+
+			document.getElementById("divTable").innerHTML = tab;
+		}
+
+		function design1(){
+			var result = "";
+			for(var i = 1; i <= 5; i++){
+				var tab = "";
+				for(var j=1; j <= i; j++){
+					tab += "*";
+				}
+
+				result += tab+"<br>";
+			}
+
+			document.getElementById("divDesign1").innerHTML = result;
+		}
+
+
+	</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>
+				<input id="txt1">
+			</td>
+			<td>
+				<input id="txt2">
+			</td>
+			<td>
+				<input type="button" value="Sum" onclick="sum()">
+				<input type="button" value="Substract" onclick="Substract()">
+				<input type="button" value="Multiply" onclick="Multiply()">
+				<input type="button" value="Divide" onclick="Divide()">
+			</td>
+		</tr>
+		<tr>
+			<td>Numbers</td>
+			<td colspan="2">
+				<div id="divTable"></div>
+
+				<div id="divDesign1"></div>
+			</td>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+		tablePrint();
+		design1();
+	</script>
+</body>
+</html>
