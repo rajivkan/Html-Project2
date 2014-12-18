@@ -4,40 +4,54 @@
 	<script type="text/javascript" src="js/scripts.js"></script>
 	<style type="text/css">
 		table, th, td {
-		   border: 1px solid black;
+		   /*border: 1px solid black;
 		   padding: 0;
-		   border-spacing: 0;
+		   border-spacing: 0;*/
 		}
 	</style>
 </head>
 <body>
 	<div>
 		<input type="button" value="Load Data" onclick="init()">
-		<table id="table1">
-			<!-- <tr>
-				<td style="width:250px">
-					Name
-				</td>
-				<td>
-					Address
-				</td>
-			</tr>
-			<tr>
-				<td style="width:250px">
-					ABC 1
-				</td>
-				<td>
-					Address 1
-				</td>
-			</tr>
-			<tr>
-				<td style="width:250px">
-					ABC 2
-				</td>
-				<td>
-					Address 2
-				</td>
-			</tr> -->
+		<input type="button" value="Get Elements" onclick="getElements()">
+		
+<br>
+		<div class="table-class"> This is a div </div>
+		<br>
+
+		<h3>User Registration Form</h3>
+			<table style="width:100%">
+				<tr>
+					<td style="width:150px"><label>Name*: </label></td>
+					<td> <input name="txtName" id="txtName" type="text"> </input></td>
+				</tr>
+
+				<tr>
+					<td><label>Email*: </label></td>
+					<td> <input name="txtEmail" id="txtEmail" type="text"> </input></td>
+				</tr>
+
+				<tr>
+					<td><label>Password*: </label></td>
+					<td> <input name="txtPassword" id="txtPassword"  type="password"> </input></td>
+				</tr>
+				<tr>
+					<td><label>Phone: </label></td>
+					<td> <input name="txtPhone" id="txtPhone" > </input></td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+						<input type="submit" value="Submit" onclick="validate()">
+					</td>
+				</tr>
+			</table>
+
+			<br>
+
+			<table id="table1" name="table1" class="table-class">
+			
 		</table>
 	</div>
 
