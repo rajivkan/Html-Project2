@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<script type="text/javascript">
+		function onChangeImage(img){
+			if(img == undefined){
+				img = document.getElementById("img1");
+			}
+			if(img.src.match("Off")){
+				// On icon
+				img.src="images/On.png";
+				img.title="On Icon";
+				//console.log(img.title);
+			}
+			else{
+				/* Off icon */
+				img.src="images/Off.png";
+				img.title="Off Icon";
+				//console.log(img.title);
+			}
+		}
+
+		function onChangeImage2(){
+			var img = document.getElementById("img1");
+			if(img.src.match("Off")){
+				// On icon
+				img.src="images/On.png";
+				img.title="On Icon";
+			}
+			else{
+				/* Off icon */
+				img.src="images/Off.png";
+				img.title="Off Icon";
+			}
+		}
+
+		function onChangeImageAuto(){
+			setInterval(function(){
+				//onChangeImage2();
+				onChangeImage();
+			}, 500)
+		}
+
+		function onChangeImageAfter5Seconds(){
+			setTimeout(function(){
+				onChangeImage();
+			}, 5000)
+		}
+
+		function onCheckNumber(){
+			var val = parseInt(document.getElementById("txt1").value);
+			// if(val >= 1 && val <= 100){
+			// 	alert("Correct!!!");
+			// }
+			// else{
+			// 	alert("In Correct!!!");
+			// }
+
+			if(val.toString() == "NaN" || val < 1 || val > 100){
+				alert("In Correct!!!");
+			}
+			else{
+				alert("Correct!!!");
+			}
+		}
+
+		// function onCheckNumber(){
+		// 	var val = document.getElementById("txt1").value;
+			
+
+		// 	if(isNaN(document.getElementById("txt1").value) || val < 1 || val > 100){
+		// 		alert("In Correct!!!");
+		// 	}
+		// 	else{
+		// 		alert("Correct!!!");
+		// 	}
+		// }
+
+	</script>
+</head>
+<body>
+	<img id="img1" src="images/Off.png" onclick="onChangeImage(this)" title="Off Icon">
+	<input type="button" onclick="onChangeImage()" value="Change Icon"> 
+	<input type="button" onclick="onChangeImageAuto()" value="Change Icon Auto">
+	<input type="button" onclick="onChangeImageAfter5Seconds()" value="Change Icon after 5 seconds">
+<br>
+	<div>
+		Enter number (1 - 100) <!-- <input type="number" id="txt1"> --> 
+		<input id="txt1">
+		<input type="button" onclick="onCheckNumber()" value="Click Me">
+	</div>
+</body>
+<script type="text/javascript">
+	//onChangeImageAuto();
+</script>
+</html>
