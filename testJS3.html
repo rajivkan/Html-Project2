@@ -4,6 +4,7 @@
 	
 	<script type="text/javascript">
 		function onChangeImage(img){
+			debugger;
 			if(img == undefined){
 				img = document.getElementById("img1");
 			}
@@ -39,7 +40,7 @@
 			setInterval(function(){
 				//onChangeImage2();
 				onChangeImage();
-			}, 500)
+			}, 2000) /* 1000 = 1 second */
 		}
 
 		function onChangeImageAfter5Seconds(){

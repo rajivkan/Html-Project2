@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function onExecWhile(){
+			var myArray = ["A", "B", "C", "D", "E", "F"];
+			var div1 = document.getElementById("div1");
+			var i = 0;
+			while(myArray[i]){
+				//if(i == 3) break;
+				
+				i++;
+				if(i == 3) continue;
+				div1.innerHTML += myArray[i-1] +"<br>";
+			}
+		}
+
+		function onExecDoWhile(){
+			var myArray = ["A", "B", "C", "D", "E", "F"];
+			var div1 = document.getElementById("div1");
+			var i = 0;
+			// do{
+			// 	div1.innerHTML += myArray[i] +"<br>";
+			// 	i++;
+			// } while(i>myArray.length)
+
+			for(;i>myArray.length;i++){
+				div1.innerHTML += myArray[i] +"<br>";
+			}
+		}
+
+		function doudleEqual(){
+			alert(""+ (1 == "1"))
+		}
+
+		function tripleEqual(){
+			alert(""+ (1 === "1"))
+		}
+
+		function getData(a, b){
+			return (a*b);
+		}
+
+	</script>
+</head>
+
+<body>
+	DIV 1
+	<div id="div1"></div>
+	<br>
+	DIV 2
+	<div id="div2"></div>
+	<br>
+	<input type="button" onclick="onExecWhile()" document.getElementById('div1').innerHTML = alue="While Loop">
+	<input type="button" onclick="onExecDoWhile()" value="Do While Loop">
+
+	<input type="button" onclick="doudleEqual()" value="== Equal">
+	<input type="button" onclick="tripleEqual()" value="=== Equal">
+
+	<input type="button" onclick="document.getElementById('div1').innerHTML = getData(2, 3)" value="Get Data 1">
+
+	<input type="button" onclick="document.getElementById('div2').innerHTML = getData(2, 3)" value="Get Data 2">
+</body>
+
+</html>
