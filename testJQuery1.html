@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+</head>
+<body>
+	<div id="div1" style="width:200px;float:left;background:#ff0000;height:800px">Div 1
+		<input type="button" id="btn1" value="-" style="float:right" onclick="onCollapseExpand()">
+	</div>
+	<div id="div2">DIv 2</div>
+
+	<script type="text/javascript">
+		//$("#div1").html("This is DIV");
+		function onCollapseExpand(){
+			if($("#btn1").val() == "-"){
+				$("#div1").animate({
+			    width: "50"
+			  }, 1000);
+				$("#btn1").val("+");
+			}
+			else{
+				$("#div1").animate({
+			    width: "200"
+			  }, 1000);
+				$("#btn1").val("-");
+			}
+		}
+	</script>
+</body>
+
+
+</html>
