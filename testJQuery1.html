@@ -7,9 +7,36 @@
 	<div id="div1" style="width:200px;float:left;background:#ff0000;height:800px">Div 1
 		<input type="button" id="btn1" value="-" style="float:right" onclick="onCollapseExpand()">
 	</div>
-	<div id="div2">DIv 2</div>
+	<div id="div2" class="div2-class">DIv 2</div>
+	<input type="button" onclick="setContentInDiv2()" value="Set">
+	<input type="button" onclick="getContentFromDiv2()" value="Get">
+
+<br>
+	<input id="txt2" class="txt2-class">
+	<input type="button" onclick="setContentInInput2()" value="Set">
+	<input type="button" onclick="getContentFromInput2()" value="Get">
 
 	<script type="text/javascript">
+
+		function setContentInDiv2(){
+			//$("#div2").html("This is modified div 2")
+			$(".div2-class").html("This is modified div 2 by class name")
+		}
+
+		function getContentFromDiv2(){
+			//alert($("#div2").html());
+			alert($(".div2-class").html());
+		}
+
+		function setContentInInput2(){
+			//$("#txt2").val("This is modified input value")
+			$(".txt2-class").val("This is modified input value by class name")
+		}
+
+		function getContentFromInput2(){
+			//alert($("#txt2").val());
+			alert($(".txt2-class").val());
+		}
 		//$("#div1").html("This is DIV");
 		function onCollapseExpand(){
 			if($("#btn1").val() == "-"){
