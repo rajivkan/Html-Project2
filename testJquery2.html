@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="js/jquery-1.11.2.js"></script><!-- 338-173-717-->
+</head>
+<body>
+	<div id="div1" style="width:200px;float:left;background:#ff0000;height:800px">Div 1
+		
+	</div>
+	
+	<script type="text/javascript">
+		$("#div1").css("width", "100%").css("background", "#cccccc")
+		//alert($("#div1").css("width"))
+		var p = $("<p></p>").text("This is a p tag");
+		$("#div1").append(p);
+		//var array = [{id:1, name: "ABC 1", address: "Address 1"}, {id:2, name: "ABC 2", address: "Address 1"}, {id:3, name: "ABC 3", address: "Address 3"}];
+		var array = [];
+		array.push({id:1, name: "ABC 1", address: "Address 1"});
+		array.push({id:2, name: "ABC 2", address: "Address 2"});
+		array.push({id:3, name: "ABC 3", address: "Address 3"});
+
+		$.each(array, function(index, item){
+			//console.log("Index: "+ index+"   item: "+item.address);
+			var lbl = $("<label></label>");
+			lbl.css("color", "#ff00ff").css("font-weight", "bold")
+			//lbl.text("Index: "+ index+"   item: "+item.address+"<br>");
+			lbl.html("Name: "+ item.name+"   item: "+item.address+"<br>");
+
+			//$("#div1").html($("#div1").html());
+			$("#div1").append(lbl);
+		})
+	</script>
+</body>
+
+
+</html>
