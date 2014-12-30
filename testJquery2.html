@@ -2,11 +2,22 @@
 <html>
 <head>
 	<script type="text/javascript" src="js/jquery-1.11.2.js"></script><!-- 338-173-717-->
+	<script type="text/javascript">
+		$("body").ready(function(){
+			alert("call");
+			$("#div1").css("color", "#0000ff").css("font-size", "50px");
+		})
+
+	</script>
 </head>
 <body>
-	<div id="div1" style="width:200px;float:left;background:#ff0000;height:800px">Div 1
-		
+	<div id="div1" class="div" style="width:200px;float:left;background:#ff0000;height:800px">Div 1
+		<input id="btn1" type="button" value="Click Me">
 	</div>
+	<div id="div2" class="div">
+		div 2
+	</div>
+
 	
 	<script type="text/javascript">
 		$("#div1").css("width", "100%").css("background", "#cccccc")
@@ -29,6 +40,22 @@
 			//$("#div1").html($("#div1").html());
 			$("#div1").append(lbl);
 		})
+		$("#div1").css("background", "#ff00ff");
+
+		// function changeFontColor(){
+		// 	$("#div1").css("color", "#0000ff");
+		// }
+
+		
+
+		// $("#btn1").on("click", function(){
+		//   alert("btn click.");
+		// });
+
+	$("#btn1").click(function(){
+		  alert("btn click.");
+		});
+
 	</script>
 </body>
 
