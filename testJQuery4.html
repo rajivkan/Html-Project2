@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+	
+</head>
+<body>
+	<span>Body Span 1</span>
+	<span>Body Span 2</span>
+
+	<label>Body label 1</label>
+	<div id="div1">
+		<span>Span 1</span><br>
+		<span>Span 2</span><br>
+		<span>Span 3</span><br>
+
+		<label>label 1</label><br>
+		<label>label 2</label><br>
+		<label>label 3</label>
+	</div>
+	<button id="btn1">Click Me</button>
+<br>
+	<table id="table1">
+		<tr>
+			<td>
+				<div>DIv 1</div>
+		<div>DIv 2</div>
+		<div>DIv 3</div>
+		<span>Span 1</span>
+		<span>Span 2</span>
+		<span>Span 3</span>
+			</td>
+		</tr>
+		
+	</table>
+
+	<script type="text/javascript">
+		$("#btn1").on("click",function(){
+				//console.log($("body span"));
+
+				//console.log($("body label"));
+
+				//console.log($("#div1 span"));
+
+				//console.log($("#div1 label"));
+
+				//$("table1 div").css("color", "#ff0000");
+				//$("table div").css("color", "#ff0000");
+				$("body table div").css("color", "#ff0000");
+
+				$("body table span").css("color", "#ff00ff");
+
+
+				var div = document.getElementById("div1");
+				alert("length: "+ div.children.length);
+		});
+	</script>
+</body>
+</html>
