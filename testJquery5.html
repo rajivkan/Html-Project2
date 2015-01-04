@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.row-alternate-bg-color{
+			background: #cccccc;
+		}
+
+		.row-alternate-bg-color2{
+			background: #ff0000;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+		  // $("div").click(function(){
+		  //   $(this).hide(500);
+		  // });
+
+			// $("#btn1").click(function(){
+			// 	$("div").hide(500);
+			// });
+
+			// $("#btn1").click(function(){
+			// 	$("div").toggle(500);
+			// });
+
+			// $("#btn2").click(function(){
+			// 	$("div").show(500);
+			// });
+
+			// $("#btn3").click(function(){
+			// 	$("#div3").remove();
+			// });
+
+			// $("#btn4").click(function(){
+			// 	$("#div3").empty();
+			// });
+
+			$("#btn3").click(function(){
+				$(".div").remove();
+			});
+
+			$("#btn4").click(function(){
+				$(".div").empty();
+			});
+
+			//$(".row-alternate-bg-color").css("background", "#ff00ff");
+
+			$(".row-alternate-bg-color").addClass("row-alternate-bg-color2");
+
+			$("#btn5").click(function(){
+				$(".row-alternate-bg-color").removeClass("row-alternate-bg-color2");
+			});
+		});
+		</script>
+</head>
+<body>
+	<div class="div">
+		Div 1
+	</div>
+
+	<div class="div">
+		Div 2
+	</div>
+
+	<div id="div3">
+		Div 3
+	</div>
+
+	<br>
+	<button id="btn1">Click me</button>
+
+	<button id="btn2">Show</button>
+
+	<button id="btn3">Remove</button>
+
+	<button id="btn4">Empty</button>
+
+	<table style="width:80%">
+		<tr>
+			<td>
+				Row 1 Col 1
+			</td>
+			<td>
+				Row 1 Col 2
+			</td>
+		</tr>
+		<tr class="row-alternate-bg-color">
+			<td>
+				Row 2 Col 1
+			</td>
+			<td>
+				Row 2 Col 2
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Row 3 Col 1
+			</td>
+			<td>
+				Row 3 Col 2
+			</td>
+		</tr>
+
+		<tr class="row-alternate-bg-color">
+			<td>
+				Row 4 Col 1
+			</td>
+			<td>
+				Row 4 Col 2
+			</td>
+		</tr>
+	</table>
+	<button id="btn5">Remove css class</button>
+</body>
+</html>
