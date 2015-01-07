@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+<script>
+	$(document).ready(function(){
+	  $("#flip").click(function(){
+	    $("#panel").slideDown("slow");
+	  });
+
+	  $("#flip1").click(function(){
+	    $("#panel1").slideUp("slow");
+	  });
+
+	  $("#flip2").click(function(){
+	    $("#panel2").slideToggle("slow");
+	  });
+	});
+</script>
+ 
+<style> 
+#panel,#panel1,#panel2,#flip,#flip1,#flip2
+{
+padding:5px;
+text-align:center;
+background-color:#e5eecc;
+border:solid 1px #c3c3c3;
+}
+#panel,#panel2
+{
+padding:50px;
+display:none;
+}
+#panel1
+{
+padding:50px;
+}
+</style>
+</head>
+<body>
+ 
+<div id="flip">Click to slide down panel</div>
+<div id="panel">Slide down</div>
+
+<br>
+
+<div id="flip1">Click to slide up panel</div>
+<div id="panel1">Slide up</div>
+
+<br>
+
+<div id="flip2">Click to slide toggle panel</div>
+<div id="panel2">Slide toggle</div>
+</body>
+</html>

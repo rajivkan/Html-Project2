@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//$("p, div, span").filter(".p1").css("color", "#ff0000");
+		//$("div, span").eq("2").css("color", "#ff0000");
+		//$("p, div, span").not(".p1").css("color", "#ff0000");
+
+		//$("span, p").last().css("color", "#ff00ff")
+
+		//$("div").first().css("color", "#ff00ff")
+		$("#div1 #div2 p").css("color", "#ff0000");
+	});
+</script>
+</head>
+
+<body>
+	<span class="p1">Span 1234</span>
+	<p id="p1" class="p1">This is first paragraph.</p>
+	<p id="p2">This is 2nd paragraph.</p>
+
+	<p id="p3" class="p1">This is 3rd paragraph.</p>
+	<p id="p4">This is 4th paragraph.</p>
+	<div class="p1">Div 1</div>
+<div id='div1' class="p1">
+	<span>Div span 1</span><br>
+	<span>Div span 1</span><br>
+	<div id="div2">
+		<span>Div Div span 1</span><br>
+		<span>Div Div span 2</span><br>
+		<span>Div Div span 3</span><br>
+		<p>Div P 1</p><br>
+		<p>Div P 2</p><br>
+		<p>Div P 3</p><br>
+	</div>
+	<p>P 1</p><br>
+	<label>Label 1</label>
+</div>
+<div class="p1">Div 3</div>
+	<span class="p1">Span 1</span>
+	<p id="p4">This is 4th paragraph.</p>
+</body>
+</html>
