@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+	<script type="text/javascript">
+		function onLoadEvent(){
+			//document.getElementById("div1").innerHTML = "<script>alert('call');<script>";
+			// var head = document.getElementsByTagName("head")[0];
+			// var sTag = document.createElement("script");
+			// sTag.type = "text/javascript";
+			// sTag.text = "alert('call');";
+			// head.appendChild(sTag);
+
+			var btn = document.createElement("button");
+			btn.innerHTML = "Dynamic Button";
+			btn.style.color = "#ff0000";
+			btn.style.fontSize = "20px";
+			btn.onclick = function(){
+				alert("it's a dynamic created button.");
+			}
+			document.getElementById("div1").appendChild(btn);
+
+			var div = document.createElement("div");
+			div.innerHTML = "Dynamic DIV";
+			// div.style.color = "#cccccc";
+			// div.style.fontSize = "14px";
+			div.className = "div-dynamic";
+			document.getElementById("bodyTag").appendChild(div);
+
+
+			var divJquery = $("<div></div>");
+			divJquery.html("Jquery DIV");
+			divJquery.addClass("div-dynamic");
+			$("#bodyTag").append(divJquery);
+		}
+	</script>
+	<style type="text/css">
+		.div-dynamic{
+			color:#ff00ff;
+			background: #cccccc;
+		}
+	</style>
+</head>
+<body id="bodyTag" onload="onLoadEvent()">
+	<button class="div-dynamic" onclick="alert('it is a html button.')"> HTML Button</button>
+	<div id="div1"></div>
+</body>
+</html>
