@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src= "js/lib/angular.min.js"></script>
+</head>
+    
+<body>
+<h2>Validation Example</h2>
+
+<form ng-app="" ng-controller="validateCtrl" 
+name="myForm" novalidate>
+
+<p>Username:<br>
+<input type="text" name="txtUser" ng-model="user" required>
+<span style="color:red" ng-show="myForm.txtUser.$dirty && myForm.txtUser.$invalid">
+<span ng-show="myForm.txtUser.$error.required">Username is required.</span>
+</span>
+</p>
+
+<p>Email:<br>
+<input type="email" name="txtEmail" ng-model="email" required>
+<span style="color:red" ng-show="myForm.txtEmail.$dirty && myForm.txtEmail.$invalid">
+<span ng-show="myForm.txtEmail.$error.required">Email is required.</span>
+<span ng-show="myForm.txtEmail.$error.email">Invalid email address.</span>
+</span>
+</p>
+
+<p>
+<input type="submit"
+ng-disabled="myForm.txtUser.$dirty && myForm.txtUser.$invalid ||  
+myForm.txtEmail.$dirty && myForm.txtEmail.$invalid">
+</p>
+
+</form>
+
+<script>
+function validateCtrl($scope) {
+    $scope.user = 'Amit';
+    $scope.email = 'amit.kumar@gmail.com';
+}
+</script>
+
+</body>
+</html>

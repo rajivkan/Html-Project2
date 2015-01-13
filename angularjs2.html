@@ -16,22 +16,34 @@
 
 		</script>-->
 		
-		<div ng-app="" ng-controller="namesController">
+		<div ng-app="app" ng-controller="namesController">
 			<input type="text" ng-model="name">
 			<ul>
 			  <li ng-repeat="x in names | filter:name | orderBy:'state':true">
 			    {{ x.name}} ,  {{x.state | uppercase }}
 			  </li>
 			</ul>
+
+			<span ng-show="true">{{getMessage()}}</span>
+			<button ng-click="getAlert()">Get Alert</button>
 		</div>
 		<script type="text/javascript">
-
-			function namesController($scope){
+			var module = angular.module("app", []);
+			module.controller("namesController", function($scope){
 				$scope.names = [
 								{name:'Sanjay',state:'Karnataka'},
 								{name:'Amit',state:'Delhi'},
 								{name:'Sriram',state:'Hyderabad'}];
-			}
+
+				$scope.getMessage = function(){
+					return "Scope function";
+				};
+
+				$scope.getAlert = function(){
+					alert("Alert!!!");
+				}
+			});
+			
 
 		</script>
 	</body>
