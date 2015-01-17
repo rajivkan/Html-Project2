@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="htmlApp">
+
+<head>
+<script src= "js/lib/angular.min.js"></script>
+<script src= "js/lib/angular-route.min.js"></script>
+<SCRIPT TYPE="text/javascript" src="js/app.js"></SCRIPT>
+</head>
+
+<body>
+	<table style="width:100%">
+		<tr style="background: #ff0000">
+			<td colspan="2" style="height:80px">Header Content</td>
+		</tr>
+		<tr>
+			<td style="width: 250px">
+				<a href="#/">Home</a><br>
+				<a href="#/about">About</a><br>
+				<a href="#/contact">Contact</a>
+			</td>
+			<td>
+				<div ng-view>
+
+				</div>
+			</td>
+		</tr>
+		<tr style="background: #ff00ff">
+			<td colspan="2" style="height:40px">Footer Content</td>
+		</tr>
+	</table>
+</body>
