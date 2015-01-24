@@ -2,8 +2,31 @@
 	This is home page {{message}}
 
 	<div>
-		<span ng-repeat="x in persons"> {{x.name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{x.address}}
+		<!-- <span ng-repeat="x in customers"> {{x.Name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{x.City}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{x.Country}}
 			<br>
-		</span>
+		</span> -->
+
+		<table style="width:80%">
+			<tr style="font-weight:bold;font-size:16px">
+				<td>Name</td>
+				<td>Address</td>
+				<td style="width:60px">Action</td>
+			</tr>
+
+			<tr ng-repeat="x in persons">
+				<td>
+					{{x.name}}
+				</td>
+				<td>
+					{{x.address}}
+				</td>
+				
+				<td>
+					<a href="#/detail/{{x.id}}">View</a>
+				</td>
+			</tr>
+		</table>
+
+		<div class=login></div>
 	</div>
 </div>

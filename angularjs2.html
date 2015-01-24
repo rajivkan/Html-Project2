@@ -17,9 +17,9 @@
 		</script>-->
 		
 		<div ng-app="app" ng-controller="namesController">
-			<input type="text" ng-model="name">
+			<input type="text" ng-model="abc">
 			<ul>
-			  <li ng-repeat="x in names | filter:name | orderBy:'state':true">
+			  <li ng-repeat="x in names | filter:abc | orderBy:'state':true">
 			    {{ x.name}} ,  {{x.state | uppercase }}
 			  </li>
 			</ul>
@@ -36,7 +36,7 @@
 								{name:'Sriram',state:'Hyderabad'}];
 
 				$scope.getMessage = function(){
-					return "Scope function";
+					return "Scope function edewewrew sdfwf";
 				};
 
 				$scope.getAlert = function(){

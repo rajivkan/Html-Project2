@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<script src= "js/lib/angular.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
 </head>
     
 <body>
@@ -15,6 +15,7 @@ name="myForm" novalidate>
 <input type="text" name="txtUser" ng-model="user" required>
 <span style="color:red" ng-show="myForm.txtUser.$dirty && myForm.txtUser.$invalid">
 <span ng-show="myForm.txtUser.$error.required">Username is required.</span>
+
 </span>
 </p>
 
@@ -27,9 +28,14 @@ name="myForm" novalidate>
 </p>
 
 <p>
+	Password:
+</p>
+<input name="txtPassword" id="newPassword" required>
+<span style="color:red" ng-show="{{!isValidPassword}}">{{errorPassword}}</span>
+<p>
 <input type="submit"
 ng-disabled="myForm.txtUser.$dirty && myForm.txtUser.$invalid ||  
-myForm.txtEmail.$dirty && myForm.txtEmail.$invalid">
+myForm.txtEmail.$dirty && myForm.txtEmail.$invalid" ng-click="validatePassword()">
 </p>
 
 </form>
@@ -38,7 +44,31 @@ myForm.txtEmail.$dirty && myForm.txtEmail.$invalid">
 function validateCtrl($scope) {
     $scope.user = 'Amit';
     $scope.email = 'amit.kumar@gmail.com';
+    $scope.isValidPassword = false;
+    $scope.errorPassword = "";
+    $scope.validatePassword = function validatePassword() {
+    	$scope.isValidPassword = true;
+    	$scope.errorPassword = "";
+		var p = document.getElementById('newPassword').value,
+		    errors = [];
+		if (p.length < 8) {
+		    errors.push("Your password must be at least 8 characters");
+		}
+		else if (p.search(/[a-z]/i) < 0) {
+		    errors.push("Your password must contain at least one letter.");
+		}
+		else if (p.search(/[0-9]/) < 0) {
+		    errors.push("Your password must contain at least one digit.");
+		}
+		if (errors.length > 0) {
+		    $scope.errorPassword = errors.join("\n");
+		    $scope.isValidPassword = false;
+		}
+		
+	}
 }
+
+
 </script>
 
 </body>
